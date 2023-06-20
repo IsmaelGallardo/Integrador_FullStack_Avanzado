@@ -1,0 +1,15 @@
+    <div class="border py-5">
+        <h1 class="text-bg-dark py-5 text-center">IMAGINE QUE AQUÍ HAY UNA TIENDA</h1>
+
+        <a href="/tienda/new">Nuevo producto</a>
+
+        <ul>
+            {{#each products}}
+            <li>
+                <a href="/products/{{this._id}}">
+                    {{this.name}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
