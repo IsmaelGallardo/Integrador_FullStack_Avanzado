@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- CODIGO ORIGINAL --}}
-    <link rel="stylesheet" href="../css/bootstrap.min.css">    
-    <link rel="stylesheet" href="../css/custom-8.css">        
-    <script src="https://kit.fontawesome.com/187dbd9ab8.js" crossorigin="anonymous"></script>   {{!-- Iconos footer --}}
-    <title>{{title}}</title>
-</head>
+{{> head}}
+
 <body>
     {{> navbar }}
-    <div class="border py-5">
-        <h1 class="text-bg-dark py-5 text-center">IMAGINE QUE AQUÍ HAY UNA TIENDA</h1>
-    {{!-- <a href="/tienda/new">Nuevo producto</a> --}}
-    <a class="btn btn-primary" href="/tienda/new">Nuevo producto</a>
+    <div class="border py-1">
+        <h1 class="text-bg-dark py-1 text-center">ADMINISTRACIÓN DE TIENDA</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">Nuevo
+            producto</button>
+    </div>
+    <div>
         <ul>
             {{#each products}}
             <li>
@@ -26,14 +18,11 @@
             {{/each}}
         </ul>
     </div>
+
     {{> footer }}
-    
-{{!-- CODIGO ORIGINAL --}}
-    <!-- ESTO LINKEA EL POPPER DE BOOTSTRAP ONLINE -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <!-- ESTO LINKEA EL JS DE BOOTSTRAP DESCARGADO -->
-    <script src="../js/bootstrap.min.js"></script>
+    {{> modalShow}}
+    {{> footerScript}}
+    {{> modalScript}}
 </body>
+
 </html>

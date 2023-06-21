@@ -5,7 +5,7 @@ exports.tienda_public = async (req, res) => {
   res.render('tienda_public', { products });
 };
 
-exports.inicio_sesion = function(req, res) {
+exports.inicio_sesion = function (req, res) {
   res.render('inicio_sesion', { title: 'Final BackEnd', body: 'Contenido de mi página' });
 };
 

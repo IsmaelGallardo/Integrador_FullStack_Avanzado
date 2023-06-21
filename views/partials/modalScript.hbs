@@ -9,6 +9,20 @@
     });
 </script> --}}
 
+<!-- Script para controlar el modal de creación -->
+<script>
+    // Obtener elementos del DOM
+    var createModal = document.getElementById('createModal');
+
+    // Función para mostrar el modal de creación
+    function openCreateModal() {
+        $(createModal).modal('show');
+    }
+
+    // Event listener para abrir el modal de creación
+    document.querySelector('button[data-target="#createModal"]').addEventListener('click', openCreateModal);
+</script>
+
 <script>
     // Función para mostrar el modal de edición
     function openEditModal() {
