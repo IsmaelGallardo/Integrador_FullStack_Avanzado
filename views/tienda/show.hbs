@@ -16,26 +16,27 @@
   {{> navbar }}
 
   <h1>:-D</h1>
-  <h2>{{product.name}} </h2>
-  <p>{{product.description}} </p>
-  <p>{{product.price}} €</p>
+  <h2>Nombre: {{product.name}} </h2>
+  <p>Descripcion: {{product.description}} </p>
+  <p>Precio: ${{product.price}} </p>
 
-  <a href="/tienda/{{product._id}}/edit">Editar</a>
+
   <!-- Botón para abrir el modal de edición -->
   <button type="button" class="btn btn-primary" onclick="openEditModal()">Editar producto</button>
 
+  <!-- Botón para abrir el modal de eliminación -->
+  <button type="button" class="btn btn-danger" onclick="openDeleteModal()">Eliminar</button>
 
-  <form action="/tienda/{{product._id}}/delete" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <button type="submit">Eliminar</button>
-  </form>
+  <a class="btn btn-secondary btn-secondary2" href="/tienda/index" role="button">
+    Volver
+  </a>
 
   {{> modalShow}}
 
 
   {{> footerScript}}
   {{!-- CODIGO ORIGINAL --}}
-{{!--   <!-- ESTO LINKEA EL POPPER DE BOOTSTRAP ONLINE -->
+  {{!-- <!-- ESTO LINKEA EL POPPER DE BOOTSTRAP ONLINE -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>

@@ -1,16 +1,28 @@
-        <!-- Enlace jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    
-{{!--     <script>
-        // Prueba de jQuery
-        $(document).ready(function () {
-            alert("jQuery está funcionando correctamente");
-        });
-    </script> --}}
+<!-- Enlace jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
-    <script>
-        // Función para mostrar el modal de edición
-        function openEditModal() {
-            $('#editModal').modal('show');
-        }
-    </script>
+{{!--
+<script>
+    // Prueba de jQuery
+    $(document).ready(function () {
+        alert("jQuery está funcionando correctamente");
+    });
+</script> --}}
+
+<script>
+    // Función para mostrar el modal de edición
+    function openEditModal() {
+        $('#editModal').modal('show');
+    }
+</script>
+
+<!-- Script para controlar el modal de eliminación -->
+<script>
+    // Obtener elementos del DOM
+    var deleteModal = document.getElementById('deleteModal');
+
+    // Función para mostrar el modal de eliminación
+    function openDeleteModal() {
+        $(deleteModal).modal('show');
+    }
+</script>

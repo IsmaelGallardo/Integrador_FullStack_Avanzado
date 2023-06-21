@@ -43,5 +43,5 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
   const { id } = req.params;
   await Product.findByIdAndDelete(id);
-  res.redirect('/tienda');
+  res.redirect('/tienda/index');
 };
