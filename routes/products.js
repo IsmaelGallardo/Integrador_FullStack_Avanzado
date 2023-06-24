@@ -4,7 +4,8 @@ const router = express.Router();
 const tiendaController = require('../controllers/tiendaController');
 
 router.get('/tienda_public', tiendaController.tienda_public);
-router.get('/inicio_sesion', tiendaController.inicio_sesion);
+router.get('/quienes_somos', tiendaController.quienes_somos);
+router.get('/contacto', tiendaController.contacto);
 
 router.get('/tienda/index', tiendaController.index);
 router.get('/tienda/new', tiendaController.new);

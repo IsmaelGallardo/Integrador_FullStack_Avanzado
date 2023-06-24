@@ -7,43 +7,66 @@
     </header>
 
     <main class="main border">
-        <ul class="inicio_sesion border">
-            <li class="border">
-                <a class="btn btn-secondary btn-secondary2" href="./inicio-sesion.html" role="button">
+        <div class="inicio_sesion border">
+            <div class="border">
+                <button class="btn btn-secondary btn-secondary2" onclick="location.href='./inicio-sesion.html'">
                     <span class="iconAuthContainer">
                         <img src="./img/circle-user.svg" alt="icono de usuario">
                     </span>Ingresa con Facebook
-                </a>
-            </li>
-            <li class="">
-                <a class="btn btn-secondary btn-secondary2" href="./inicio-sesion.html" role="button">
+                </button>
+            </div>
+            <div class="">
+                <button class="btn btn-secondary btn-secondary2" onclick="location.href='./inicio-sesion.html'">
                     <span class="iconAuthContainer">
                         <img src="./img/circle-user.svg" alt="icono de usuario">
                     </span>Ingresa con Google
-                </a>
-            </li>
-            <li class="">
-                <a class="btn btn-secondary btn-secondary2" href="./inicio-sesion.html" role="button">
+                </button>
+            </div>
+            <div class="">
+                <button class="btn btn-secondary btn-secondary2" onclick="location.href='./inicio-sesion.html'">
                     <span class="iconAuthContainer">
                         <img src="./img/circle-user.svg" alt="icono de usuario">
                     </span>Ingresa con tu email
-                </a>
-            </li>
-            <li class="py-3">
-                <a class="btn btn-secondary btn-secondary2" href="./inicio-sesion.html" role="button">
+                </button>
+            </div>
+            <div class="py-3">
+                <button class="btn btn-secondary btn-secondary2" onclick="location.href='./inicio-sesion.html'">
                     Registrate
-                </a>
-            </li>
-            <li class="py-3">
-                <a class="btn btn-secondary btn-secondary2" href="./tienda/index" role="button">
+                </button>
+            </div>
+            <div class="py-3">
+                <button class="btn btn-secondary btn-secondary2" onclick="location.href='./tienda/index'">
                     SALTAR
-                </a>
-            </li>
-        </ul>
+                </button>
+            </div>
+        </div>
     </main>
 
-    {{> footerScript}}
 
+    {{!-- <!-- Botón para abrir el modal de inicio de sesión -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+        Iniciar sesión
+    </button>
+
+
+
+    <!-- Script para controlar el modal de inicio de sesión -->
+    <script>
+        // Obtener elementos del DOM
+        var loginModal = document.getElementById('loginModal');
+
+        // Función para mostrar el modal de inicio de sesión
+        function openLoginModal() {
+            $(loginModal).modal('show');
+        }
+
+        // Event listener para abrir el modal de inicio de sesión
+        document.querySelector('button[data-target="#loginModal"]').addEventListener('click', openLoginModal);
+    </script> --}}
+
+    {{> modalShow}}
+    {{> footerScript}}
+    {{> modalScript}}
 </body>
 
 </html>
