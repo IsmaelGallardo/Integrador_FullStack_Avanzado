@@ -2,19 +2,22 @@
 
 <body>
     {{> navbar }}
-    <div class="border py-5">
-        <h1 class="text-bg-dark py-5 text-center">IMAGINE QUE AQUÍ HAY UNA TIENDA</h1>
+    <div class="border py-1">
+        <h1 class="text-bg-dark py-1 text-center">IMAGINE QUE AQUÍ HAY UNA TIENDA</h1>
 
         <ul>
             {{#each products}}
             <li>
-                <a href="/products/{{this._id}}">
+                <a href="/tienda_public/{{this._id}}">
                     {{this.name}}
                 </a>
             </li>
             {{/each}}
         </ul>
     </div>
+    <a class="btn btn-secondary" href="/" role="button">
+        Volver
+    </a>
     {{> footer }}
     {{> footerScript}}
 </body>

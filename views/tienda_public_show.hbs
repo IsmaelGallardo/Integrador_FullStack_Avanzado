@@ -1,0 +1,24 @@
+{{> head}}
+
+<body>
+    {{> navbar }}
+    <div class="border py-1">
+        <h1 class="text-bg-dark py-1 text-center">Producto</h1>
+
+        <h2>Nombre: {{product.name}} </h2>
+        <p>Descripcion: {{product.description}} </p>
+        <p>Precio: ${{product.price}} </p>
+    </div>
+    <div class="border py-1">
+
+        <a class="btn btn-secondary" href="/tienda_public" role="button">
+            Volver
+        </a>
+    </div>
+    {{> footer }}
+    {{> modalShow}}
+    {{> footerScript}}
+    {{> modalScript}}
+</body>
+
+</html>

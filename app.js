@@ -4,6 +4,17 @@ const hbs = require('hbs');
 
 port = 3000;
 
+const admin = require("firebase-admin");
+
+const serviceAccount = require("./db-final-avanzado-firebase-adminsdk-vuhmo-f802ec79c4.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+const todosCollection = db.collection('todos');
+
 const app = express();
 
 app.set('view engine', 'hbs');

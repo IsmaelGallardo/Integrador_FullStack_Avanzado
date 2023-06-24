@@ -29,6 +29,12 @@ exports.show = async (req, res) => {
   res.render('tienda/show', { product });
 };
 
+exports.show_public = async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  res.render('tienda_public_show', { product });
+};
+
+
 exports.edit = async (req, res) => {
   const product = await Product.findById(req.params.id);
   res.render('tienda/edit', { product });

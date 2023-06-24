@@ -10,6 +10,7 @@ router.get('/tienda/index', tiendaController.index);
 router.get('/tienda/new', tiendaController.new);
 router.post('/tienda', tiendaController.create);
 router.get('/tienda/:id', tiendaController.show);
+router.get('/tienda_public/:id', tiendaController.show_public);
 router.get('/tienda/:id/edit', tiendaController.edit);
 router.post('/tienda/:id', tiendaController.update);
 router.post('/tienda/:id/delete', tiendaController.delete);
