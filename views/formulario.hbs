@@ -1,0 +1,29 @@
+{{> head}}
+
+<body>
+    {{> navbar }}
+<h1>Contacto</h1>
+
+    {{#if error }}
+    <p> {{error}}</p>
+    {{/if}}
+
+<form action="/enviar" method="post">
+        <label for="nombre"> Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <label for="email"> Email:</label>
+        <input type="text" name="email" id="email" required>
+        <label for="mensaje"> Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    {{> footer }}
+
+    {{> modalShow}}
+    {{> footerScript}}
+    {{> modalScript}}
+</body>
+
+</html>

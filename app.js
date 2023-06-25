@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const hbs = require('hbs');
+const nodemailer = require('nodemailer');
+const router = require ('./routes/formulario')
 
 port = 3000;
 
@@ -19,6 +21,9 @@ const app = express();
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + "/views/partials");
+// Configurar directorio de vistas
+app.set('views', __dirname + '/views');
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -36,6 +41,7 @@ const userRoutes = require('./routes/user');
 
 app.use('/', productRoutes);
 app.use('/', userRoutes);
+app.use('/', router)
 
 //Rutas
 app.get('/', homeController.index);
