@@ -14,8 +14,8 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-/* const db = admin.firestore();
-const todosCollection = db.collection('todos'); */
+const db = admin.firestore();
+const todosCollection = db.collection('todos');
 
 const app = express();
 

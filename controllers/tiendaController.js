@@ -5,12 +5,8 @@ exports.tienda_public = async (req, res) => {
   res.render('tienda_public', { products });
 };
 
-exports.quienes_somos = function (req, res) {
-  res.render('quienes_somos', { title: 'Final BackEnd', body: 'Contenido de mi página' });
-};
-
-exports.contacto = function (req, res) {
-  res.render('contacto', { title: 'Final BackEnd', body: 'Contenido de mi página' });
+exports.inicio_sesion = function (req, res) {
+  res.render('inicio_sesion', { title: 'Final BackEnd', body: 'Contenido de mi página' });
 };
 
 exports.index = async (req, res) => {
