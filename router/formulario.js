@@ -3,6 +3,16 @@ const nodemailer = require('nodemailer');
 
 const router = express.Router();
 
+// Configurar transportador SMTP
+const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
+    }
+});
+
 
 router.get('/contacto',(req, res) => {
     res.render("contacto")
@@ -20,14 +30,14 @@ if (!nombre || !email || !mensaje){
 
 //Configurar transportador SMTP
 
-const transporter = nodemailer.createTransport({
+/* const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
         user: 'aniyah.oreilly78@ethereal.email',
         pass: 'pRASM5DvKdYEzfeC3a'
     }
-});
+}); */
 
 //Configurar correo electrónico
 const mailOptions = {
