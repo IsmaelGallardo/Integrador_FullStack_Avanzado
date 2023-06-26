@@ -33,12 +33,17 @@ mongoose.connection.on('error', err => {
 const homeController = require('./controllers/homeController');
 const productRoutes = require('./routes/products');
 const userRoutes = require('./routes/user');
+const formularioRouter = require('./router/formulario'); // Incorporación del router del formulario
 
 app.use('/', productRoutes);
 app.use('/', userRoutes);
+app.use(formularioRouter); // Incorporación del router del formulario
 
 //Rutas
 app.get('/', homeController.index);
+/* app.get('/contacto', (req, res) => {
+  res.render("contacto");
+}); */
 
 app.listen (port, () => {
     console.log(`Servidor funcionando en puerto ${port}`);
