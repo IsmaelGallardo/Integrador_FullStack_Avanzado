@@ -85,10 +85,10 @@ El proyecto utiliza las siguientes dependencias principales:
 ## Modales jQuery
 El proyecto utiliza modales jQuery para ciertas funcionalidades.
 
-Modal de Creación
-Modal de Edición
-Modal de Eliminación
-Modal de Inicio de Sesión
+Modal de Creación.
+Modal de Edición.
+Modal de Eliminación.
+Modal de Inicio de Sesión.
 
 
 ## Conclusión
