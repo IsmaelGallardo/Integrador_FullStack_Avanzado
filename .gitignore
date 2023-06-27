@@ -1,2 +1,5 @@
-node_modules
+# Archivo de variables de entorno
 .env
+
+# Archivos generados por Node.js
+node_modules/
