@@ -1,9 +1,6 @@
 # Integrador_FullStack_Avanzado
 Trabajo integrador final FullStack UTN
 
-# Integrador_FullStack_Avanzado
-Trabajo integrador final FullStack UTN
-
 # Documentación del Proyecto 
 
 ## Configuración
