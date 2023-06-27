@@ -2,24 +2,31 @@
 
 <body>
   {{> navbar }}
-  <div class="border py-1">
-    <h1 class="text-bg-dark py-1 text-center">Producto</h1>
+<div class="container py-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="border p-2">
+        <h1 class="text-dark py-1 text-center">Producto</h1>
 
-    <h2>Nombre: {{product.name}} </h2>
-    <p>Descripcion: {{product.description}} </p>
-    <p>Precio: ${{product.price}} </p>
+        <h2>Nombre: {{product.name}}</h2>
+        <p>Descripción: {{product.description}}</p>
+        <p>Precio: ${{product.price}}</p>
+      </div>
+      <div class="py-1">
+        <!-- Botón para abrir el modal de edición -->
+        <button type="button" class="btn btn-primary" onclick="openEditModal()">Editar producto</button>
+
+        <!-- Botón para abrir el modal de eliminación -->
+        <button type="button" class="btn btn-danger" onclick="openDeleteModal()">Eliminar</button>
+
+        <div class="d-grid py-2">
+          <a class="btn btn-secondary" href="/tienda/index" role="button">Volver</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="border py-1">
-    <!-- Botón para abrir el modal de edición -->
-    <button type="button" class="btn btn-primary" onclick="openEditModal()">Editar producto</button>
+</div>
 
-    <!-- Botón para abrir el modal de eliminación -->
-    <button type="button" class="btn btn-danger" onclick="openDeleteModal()">Eliminar</button>
-
-    <a class="btn btn-secondary" href="/tienda/index" role="button">
-      Volver
-    </a>
-  </div>
   {{> footer }}
   {{> modalShow}}
   {{> footerScript}}

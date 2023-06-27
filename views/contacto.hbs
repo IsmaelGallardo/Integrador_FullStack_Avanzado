@@ -7,16 +7,30 @@
     <p> {{error}}</p>
     {{/if}}
 
-    <form action="/contacto/enviar" method="post">
-        <label for="nombre"> Nombre:</label>
-        <input type="text" name="nombre" id="nombre" required>
-        <label for="email"> Email:</label>
-        <input type="text" name="email" id="email" required>
-        <label for="mensaje"> Mensaje:</label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/contacto/enviar" method="post" class="border p-4 rounded-lg">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <input type="submit" value="Enviar" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-        <input type="submit" value="Enviar">
-    </form>
 
     {{> footer }}
 
